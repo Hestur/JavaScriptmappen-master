@@ -6,7 +6,16 @@
     <title>Opgave1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script>
+        
+        function skiftFarve(response) {
+        
+         document.getElementById("overskrift").style.color = "red"; document.getElementById("overskrift").style.backgroundColor = "grey";
+        // document.querySelector("#overskrift")
+            
+        }
+
+    </script>
     <style> /* inline style */
         #wrapper {background-color: aquamarine;}
     </style>
@@ -15,10 +24,10 @@
         <div id="wrapper">
 
 
-                <h1 id="overskrift">Opgave 1: Skift farve på overskrift</h1>
+                <h1>Opgave 1: Skift farve på overskrift</h1>
         
-                <h2>Her er en overskrift</h2>
-                <input type="button" id="knap" value="Klik her" onclick=""/>
+                <h2 id="overskrift"> Her er en overskrift</h2>                         
+                <input type="button" id="knap" value="Klik her" onclick="skiftFarve('hejhej');"/>
         
         
         

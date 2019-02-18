@@ -6,7 +6,15 @@
     <title>Opgave3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script>
+    
+    function ClickButton(){
+        document.getElementById("wrapper").style.backgroundColor = "aquamarine";
+        document.getElementById("knap").style.cssText = "color: red; background:blue;";
+        document.getElementById("knap").disabled = true;
+    }
+
+    </script>
 </head>
 <body>
         <div id="wrapper">
@@ -22,7 +30,7 @@
                         Phasellus dui. </p>
                 </div>
         
-                <input type="button" value="Klik her" id="knap" />
+                <input type="button" value="Klik her" id="knap" onclick="ClickButton()" />
         
                 <div id="opgaven">
         

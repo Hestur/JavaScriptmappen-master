@@ -6,7 +6,11 @@
     <title>Opgave2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script>
+        function txtTransform() {
+        document.getElementById("teksten").style.fontStyle = "italic";
+    }
+    </script>
 </head>
 <body>
         <div id="wrapper">
@@ -25,7 +29,7 @@
                     urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum
                     nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. </p>
         
-                <input type="button" value="Klik her" id="knap" />
+                <input type="button" value="Klik her" id="knap" onclick="txtTransform()" />
         
                 <div id="opgaven">
         
