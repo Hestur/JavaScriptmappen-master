@@ -1,6 +1,7 @@
 ﻿/* ELEMENTS/TAGS */
 *               { font-family: Verdana, Sans-Serif; }
-body            { font-size: 12px; background: #CCC; }
+body            { font-size: 12px; background: #D1E3B9; }
+h1              { color: #527129; margin-bottom: 30px;}
 ol              { padding-bottom: 10px; }
 li              { line-height: 16px; color: #364E6F; font-family: Courier, Monospace;  }
 p               { line-height: 20px; }
@@ -24,9 +25,9 @@ hr		        { border: 0; height: 1px; margin-top: 30px; margin-bottom: 40px; bac
 #boxcontainer   { position: relative; height: 400px; background: #BFF2BF; border-radius: 10px; }
 #box            { position: absolute; top: 20%; left: 20%; height:100px; width:100px; background:#E6145D url(img/gradient.png); border: 1px solid #E6145D; border-radius: 5px; }
 
-#opgaven        { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #6E9242; }
+#opgaven        { margin: 30px 0; padding-bottom: 20px; border-bottom: 1px dashed #6E9242; border-top: 1px dashed #6E9242;}
 #opgaven h4, #opgaven p, #opgaven li, #opgaven a       
-                { font-family: Courier New, Courier, monospace; }
+                { font-family: Courier New, Courier, monospace; font-size: 1rem; }
 #help           { }
 #help:before    {content:'\2316';}
 #control        { margin: 10px 20px 10px 10px;  }
