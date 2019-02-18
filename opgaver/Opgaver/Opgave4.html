@@ -6,7 +6,23 @@
     <title>Opgave4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script>
+    
+    
+function myFunctionOnClick() {
+ var x = document.getElementById("overskrift");
+ if (x.innerHTML === "Opgave 4: Skift tekst") {
+   x.innerHTML = "Ny FEDERE overskrift";
+ } else {
+   x.innerHTML = "Opgave 4: Skift tekst";
+ }
+}
+
+        
+       
+
+    
+    </script>
 </head>
 <body>
         <div id="wrapper">
@@ -28,7 +44,7 @@
                     </p>
                 </div>
         
-                <input type="button" value="Klik her" id="knap" />
+                <input type="button" value="Klik her" id="knap" onclick="myFunctionOnClick()" />
         
         
                 <div id="opgaven">
