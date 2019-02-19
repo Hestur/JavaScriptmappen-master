@@ -1,52 +1,135 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Opgave8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script>
+        //    window.onload = function(){
+        //        getSeason();
+        //    }
+        let s = "";
+        let month = "";
+        function getSeason(month) {
+           let img = document.getElementById("img1");
+            switch (new Date().getMonth()) {
+                case 0:
+                    month = "Januar";
+                    s = "Vinter";
+                    img.src ="./img/winter.jpg"
+                    break;
+                case 1:
+                    month = "Febuar";
+                    s = "Vinter";
+                    img.src ="./img/winter.jpg"
+                    break;
+                case 2:
+                    month = "Marts";
+                    s = "Forår";
+                    img.src ="./img/spring.jpg"
+                    break;
+                case 3:
+                    month = "April";
+                    s = "Forår";
+                    img.src ="./img/spring.jpg"
+                    break;
+                case 4:
+                    month = "Maj";
+                    s = "Forår";
+                    img.src ="./img/spring.jpg"
+                    break;
+                case 5:
+                    month = "Juni";
+                    s = "Sommer"
+                    img.src ="./img/summer.jpg"
+                    break;
+                case 6:
+                    month = "Juli";
+                    s = "Sommer";
+                    img.src ="./img/summer.jpg"
+                    break;
+                case 7:
+                    month = "August";
+                    s = "Sommer";
+                    img.src ="./img/summer.jpg"
+                    break;
+                case 8:
+                    month = "September";
+                    s = "Efterår";
+                    img.src ="./img/autumn.jpg"
+                    break;
+                case 9:
+                    month = "October";
+                    s = "Efterår";
+                    img.src ="./img/autumn.jpg"
+                    break;
+                case 10:
+                    month = "November";
+                    S = "Efterår";
+                    img.src ="./img/autumn.jpg"
+                    break;
+                case 11:
+                    month = "December";
+                    s = "vinter";
+                    img.src ="./img/winter.jpg"
+                    break;
+
+                    
+            }
+
+            
+
+            document.getElementById("seasontext").innerHTML = month + " " + s;
+        }
+
+
+
+
+    </script>
 </head>
-<body>
-        <div id="wrapper">
 
-                <h1 id="overskrift">Opgave 8: Datoer og betingelser - skift image efter årstid</h1>
-        
-        
-                <h2 id="seasontext">Vis årstiden</h2>
-                <div id="seasonimage">
-                    <img src="./img/default.jpg" />
-                </div>
-        
-                <div id="opgaven">
-        
-                    <h2>Opgaven</h2>
-        
-                    <ol>
-                        <li>Når siden loader:</li>
-                        <li>Skal div'en (id=seasonimage) indeholde det image, som passer til årstiden</li>
-                        <li>Og h2-tag'et (id=seasontext) skal indeholde en passende overskrift (fx Sommer, Efterår, Vinter eller
-                            Forår)</li>
-                    </ol>
-        
-                    <p class="i">I image-mappen finder du fire årstids-images: spring.jpg, summer.jpg, autumn.jpg og winter.jpg
-                    </p>
-        
-                    <p id="help">
-                        Få hjælp fx her:
-                        <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a
-                            href="http://www.w3schools.com/js/js_date_methods.asp" target="_blank">JavaScript Date Methods</a>
-                        og <a href="http://www.w3schools.com/js/js_if_else.asp" target="_blank">conditions/if-else</a> og/eller
-                        <a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch</a>
-                    </p>
-        
-                </div>
-        
-        
-            </div>
-        
+<body onload="getSeason()">
+    <div id="wrapper">
+
+        <h1 id="overskrift">Opgave 8: Datoer og betingelser - skift image efter årstid</h1>
+
+
+        <h2 id="seasontext">Vis årstiden</h2>
+        <div id="seasonimage">
+            <img src="./img/default.jpg" id="img1" />
+            
+        </div>
+
+        <div id="opgaven">
+
+            <h2>Opgaven</h2>
+
+            <ol>
+                <li>Når siden loader:</li>
+                <li>Skal div'en (id=seasonimage) indeholde det image, som passer til årstiden</li>
+                <li>Og h2-tag'et (id=seasontext) skal indeholde en passende overskrift (fx Sommer, Efterår, Vinter eller
+                    Forår)</li>
+            </ol>
+
+            <p class="i">I image-mappen finder du fire årstids-images: spring.jpg, summer.jpg, autumn.jpg og winter.jpg
+            </p>
+
+            <p id="help">
+                Få hjælp fx her:
+                <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a
+                    href="http://www.w3schools.com/js/js_date_methods.asp" target="_blank">JavaScript Date Methods</a>
+                og <a href="http://www.w3schools.com/js/js_if_else.asp" target="_blank">conditions/if-else</a> og/eller
+                <a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch</a>
+            </p>
+
+        </div>
+
+
+    </div>
+
 </body>
-</html>
 
-   
+</html>
