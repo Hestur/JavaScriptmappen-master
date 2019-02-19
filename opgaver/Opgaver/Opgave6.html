@@ -6,15 +6,24 @@
     <title>Opgave6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
+    <script window.onload>
+    
+   
+            function myfunction(){
+                document.getElementById("billede").src = "./img/tt2.gif";
+            }
+         
+            function myfunction2(){
+                document.getElementById("billede").src = "./img/tt1.gif";
+            }
+             </script>
 </head>
 <body>
         <div id="wrapper">
 
                 <h1 id="overskrift">Opgave 6: Skift image</h1>
         
-                <img src="./img/tt1.gif" alt="Teletubbies" title="En fjerdedel teletubbies" />
-        
+                <img src="./img/tt1.gif" alt="Teletubbies" title="En fjerdedel teletubbies" onmouseover='myfunction()' onmouseout='myfunction2()' id="billede" />
         
         
                 <div id="opgaven">
@@ -44,5 +53,6 @@
         
         
 </body>
+
 </html>
    
