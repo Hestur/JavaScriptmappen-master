@@ -1,52 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Opgave7</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script src="main.js"></script>
-</head>
-<body>
-        <div id="wrapper">
+    <script>
 
-                <h1>Opgave 7: Datoer og betingelser</h1>
-        
-                <h2>Er det hverdag eller weekend?</h2>
-                <p id="dato">Hvilken dato er det mon i dag?</p>
-                <p id="slagsdag">Og hvilken slags dag er det?</p>
-        
-                <input type="button" value="Klik her" id="knap" />
-        
-                <div id="opgaven">
-        
-                    <h4>Opgaven</h4>
-                    <ol>
-                        <li>Når man klikker på knappen:</li>
-                        <li>Skal dagens dato vises i id=dato</li>
-                        <li>
-                            Og der skal i id=slagsdag ske en af følgende:
-                            <ul>
-                                <li>HVIS mandag, tirsdag, onsdag eller torsdag: "Øv det er hverdag"</li>
-                                <li>HVIS fredag: "Hverdag men NÆSTEN weekend"</li>
-                                <li>HVIS lørdag eller søndag: "Hurra - det er weekend"</li>
-                                <li>Og ellers tekst: "Der er sket en fejl"</li>
-                            </ul>
-                        </li>
-                    </ol>
-        
-                    <p id="help">
-                        Få hjælp fx her:
-                        <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a
-                            href="http://www.w3schools.com/jsref/jsref_obj_date.asp">JavaScript Date Reference</a> og <a
-                            href="http://www.w3schools.com/js/js_date_methods.asp">JavaScript Date Methods</a>
-                    </p>
-        
-                </div>
-        
-            </div>
-        
+        var d = new Date();
+        let day = "";
+        function DateCurrent() {
+            document.getElementById("dato").innerHTML = d.toString();
+            switch (new Date().getDay()) {
+                case 0:
+                    day = "Hurra - det er weekend";
+                    break;
+                case 1:
+                    day = "Øv det er hverdag";
+                    break;
+                case 2:
+                    day = "Øv det er hverdag";
+                    break;
+                case 3:
+                    day = "Øv det er hverdag";
+                    break;
+                case 4:
+                    day = "Øv det er hverdag, men lille fredag!!";
+                    break;
+                case 5:
+                    day = "Hverdag men NÆSTEN weekend";
+                    break;
+                case 6:
+                    day = "Hurra - det er weekend";
+                    break;
+                default:
+                    day = "det er ikke en af de 7 ugedage xD"
+            }
+            document.getElementById("slagsdag").innerHTML = day;
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <h1>Opgave 7: Datoer og betingelser</h1>
+
+        <h2>Er det hverdag eller weekend?</h2>
+        <p id="dato">Hvilken dato er det mon i dag?</p>
+        <p id="slagsdag">Og hvilken slags dag er det?</p>
+
+        <input type="button" value="Klik her" id="knap" onclick="DateCurrent()" />
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+            <ol>
+                <li>Når man klikker på knappen:</li>
+                <li>Skal dagens dato vises i id=dato</li>
+                <li>
+                    Og der skal i id=slagsdag ske en af følgende:
+                    <ul>
+                        <li>HVIS mandag, tirsdag, onsdag eller torsdag: "Øv det er hverdag"</li>
+                        <li>HVIS fredag: "Hverdag men NÆSTEN weekend"</li>
+                        <li>HVIS lørdag eller søndag: "Hurra - det er weekend"</li>
+                        <li>Og ellers tekst: "Der er sket en fejl"</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p id="help">
+                Få hjælp fx her:
+                <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a
+                    href="http://www.w3schools.com/jsref/jsref_obj_date.asp">JavaScript Date Reference</a> og <a
+                    href="http://www.w3schools.com/js/js_date_methods.asp">JavaScript Date Methods</a>
+            </p>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
-   
