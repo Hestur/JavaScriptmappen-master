@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Opfølgningsopgave</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script>
+    
+    function ClickButton(){
+        document.getElementById("wrapper").style.backgroundColor = "black"
+        document.getElementById("knap").style.cssText = "color: red; background:blue;";
+        document.getElementById("HeadLine").style.cssText = "color: yellow";
+    }
+    
+    function ShowConfirm(){
+    
+        if(confirm("This is first confirmation, do you wish to recive a free gift"))       
+        {
+            if(confirm("Are you sure you want to recive your daily free gift?"))
+                {
+                    if(confirm("Without further concideration???"))
+                    {
+                    alert("You have reached the limit of your free gifts today, buy the premius version and get double gifts for a limited time only");
+                    }
+                }
+        }
+    }
+
+
+
+    </script>
+</head>
+<body>
+
+        <div id="wrapper">
+
+
+                <h1 id ="HeadLine">The gift shop</h1>
+        
+
+                <input type="button" value="Click me" id="knap" onclick="ClickButton()" />
+
+                <input type="button" value="Click here for free gifts" id="knap2" onclick="ShowConfirm()" />
+        
+               
+        
+            </div>
+    
+</body>
+</html>

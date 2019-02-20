@@ -7,13 +7,22 @@
     <title>Opgave10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style/common.css">
-    <script window.onload>
+    <style>
+        #board {
+            box-sizing: content-box;
+            position: static;
+            width: 500px;
+            height: 300px;
+            padding: 5px;
+            border: 5px solid green;
+            background-color: aqua;
+        }
 
-
-    </script>
+       
+    </style>
 </head>
 
-<body>
+<body onkeydown='getKeyAndMove(event)'>
     <div id="wrapper">
 
         <h1 id="overskrift">Opgave 10: Flyt image</h1>
@@ -24,10 +33,10 @@
         </div>
 
         <div id="control">
-            <img id="venstre" src="./img/venstre.png" alt="Venstre" />
-            <img id="op" src="./img/op.png" alt="Op" />
-            <img id="ned" src="./img/ned.png" alt="Ned" />
-            <img id="hoejre" src="./img/hoejre.png" alt="Højre" />
+            <img id="venstre" src="./img/venstre.png" alt="Venstre" onclick="moveLeft()" />
+            <img id="op" src="./img/op.png" alt="Op" onclick="moveUp()" />
+            <img id="ned" src="./img/ned.png" alt="Ned" onclick="moveDown()" />
+            <img id="hoejre" src="./img/hoejre.png" alt="Højre" onclick="moveRight()" />
         </div>
 
 
@@ -58,6 +67,67 @@
         </div>
 
     </div>
+
+
+    <script window.onload>
+
+
+        var objImage = null;
+        function init() {
+            objImage = document.getElementById("pacman");
+            objImage.style.position = 'absolute';
+            objImage.style.left = '600px';
+            objImage.style.top = '250px';
+        }
+        function getKeyAndMove(e) {
+            var key_code = e.which || e.keyCode;
+            switch (key_code) {
+                case 37: //left arrow key
+                    moveLeft();
+                    break;
+                case 38: //Up arrow key
+                    moveUp();
+                    break;
+                case 39: //right arrow key
+                    moveRight();
+                    break;
+                case 40: //down arrow key
+                    moveDown();
+                    break;
+            }
+        }
+        function moveLeft() {
+            if (parseInt(objImage.style.left) > 365) {
+            objImage.style.left = parseInt(objImage.style.left) - 5 + 'px';
+            }
+        }
+        function moveUp() {
+            if (parseInt(objImage.style.top) > 130) {
+            objImage.style.top = parseInt(objImage.style.top) - 5 + 'px';
+        }
+        }
+        
+        function moveRight() {
+            if (parseInt(objImage.style.left) < 810) {
+                objImage.style.left = parseInt(objImage.style.left) + 5 + 'px';
+            }
+
+        }
+        function moveDown() {
+            
+            if (parseInt(objImage.style.top) < 375) {
+            objImage.style.top = parseInt(objImage.style.top) + 5 + 'px';
+            }
+        }
+        window.onload = init;
+
+
+
+
+
+
+    </script>
+
 
 </body>
 
