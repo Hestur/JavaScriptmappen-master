@@ -12,7 +12,7 @@
         alert("Alert: you are being redirected to google.com");
     }
     function MyConfirm(){
-        confirm("Are you sure you want to leave the website?");
+        return confirm("Are you sure you want to leave the website?");
     }
    
 
@@ -26,7 +26,7 @@
         
         
                 <h2>Alert eller confirm?</h2>
-                <p><a href="http://google.dk" onclick="return MyAlert()" >Klik for at besøge Google</a></p>
+                <p><a href="http://google.dk" onclick="MyAlert()" >Klik for at besøge Google</a></p>
                 <p><a href="http://bing.com" onclick="return MyConfirm()">Klik for at besøge Bing</a></p>
         
                 <div id="opgaven">
