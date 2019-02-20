@@ -41,6 +41,25 @@
             document.getElementById("slagsdag").innerHTML = day;
         }
 
+        function DatoCheck() {
+
+            let dato = new Date();
+            let ugedag = dato.getDay();
+            let text;
+
+            if (ugedag > 0 && ugedag < 5) {
+                text = "øv det hverdag";
+            } else if (ugedag == 5) {
+                text = "hverdag men næsten weekend";
+            } else if (ugedag == 6 || ugedag == 0) {
+                text = "weekend!";
+            } else {
+                text = "error";
+            }
+            document.getElementById("slagsdag").innerHTML = text;
+        }
+
+
 
 
     </script>
