@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style\common.css">
+    <title>Opgave 12</title>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="overskrift">Opgave 12: Array-øvelse 1</h1>
+        <p>Bemærk array'et i script-tag i head!</p>
+
+        <p id="foerste"></p>
+        <div id="alle"></div>
+
+        <input type="button" value="Klik her for at udskrive værdierne i arrayet" id="knap"
+            onclick="getFirstInArray()" ondblclick="printAll()" />
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+
+            <ol>
+                <li>Når man klikker på knappen</li>
+                <li>... skal første værdi/item/value (Reol) udskrives i #foerste (uden brug af loop)</li>
+                <li>... og listen/arrayet skal LOOPES igennem og værdierne skal udskrives i #alle</li>
+                <li>Prøv evt. om du kan udskrive/loope værdierne ud i en html-liste ol eller ul ...</li>
+            </ol>
+
+            <p id="help" class="b">Få hjælp fx her:</p>
+            <ul>
+                <li><a href="https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm"
+                        target="_blank">JavaScript - The Arrays Object</a></li>
+                <li><a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">JavaScript Arrays (se fx
+                        afsnittet "Access the Elements of an Array")</a></li>
+                <li><a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">JavaScript For Loop</a></li>
+                <li><a href="https://www.w3schools.com/js/js_array_iteration.asp" target="_blank">Lidt anderledes måder
+                        at loope et array ud på: JavaScript Array Iteration Methods</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+                        target="_blank">Array.prototype.forEach()</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var list1 = ["Reol", "Stol", "Bord", "Seng", "Skab", "Seng"];
+
+        function getFirstInArray() {
+            document.getElementById("foerste").innerText = list1[0];
+           
+        }
+        function printAll() {
+           
+            for (i = 0; i < list1.length; i++) {
+              text = "<ul>";  
+              document.getElementById("alle").innerHTML += text += "<li>" + list1[i] + "</li>";
+               text = "</ul>";
+            } 
+        }
+              
+        
+
+
+    </script>
+</body>
+
+</html>

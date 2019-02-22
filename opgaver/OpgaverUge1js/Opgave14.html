@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style\common.css">
+    <title>Opgave 14</title>
+    <style>
+        #resultat { margin-top: 30px; padding: 20px; background: #F0F7E3; }
+        #resultat li { line-height: 30px; font-family: Verdana, Sans-Serif; }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="overskrift">Opgave 14: Lommeregner</h1>
+
+        <h4>Regn det ud:</h4>
+        <form action="">
+
+            <fieldset>
+                <legend>Regnemaskine</legend>
+
+                <div>
+                    <label for="tal1">Indtast det ene tal:</label>
+                    <input type="text" name="tal1" id="tal1">
+
+                </div>
+                <div>
+                    <label for="tal2">Indtast det andet tal: </label>
+                    <input type="text" name="tal2" id="tal2">
+                </div>
+                <div>
+                    <input type="button" value="Klik for at beregne" id="knap" />
+                </div>
+
+            </fieldset>
+
+        </form>
+
+        <div id="resultat">
+            <ul>
+                <li>De to tal + (plusset) = <span id="plus">...</span></li>
+                <li>De to tal - (minuset) = <span id="minus">...</span></li>
+                <li>De to tal * (ganget) = <span id="gange">...</span></li>
+                <li>De to tal / (divideret) = <span id="dividere">...</span></li>
+            </ul>
+        </div>
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+
+            <h4>JavaScript - beregn</h4>
+            <p>Brugeren indtaster et tal i hvert af de to input-felter. Når han klikker på knappen bliver de to tal plusset, minuset, ganget og divideret med hinanden og resultatet vist på siden.</p>
+            <ol>
+                <li>Når man klikker på knappen -> bliver de to tal for input-felterne beregnet (plus, minus, gange og dividere)</li>
+                <li>Resultatet af beregningen vises i de fire span-tag</li>
+                <li>Forsøg at give brugeren en advarsel, hvis et inputfelt er tomt (validere), når der trykkes på knappen.</li>
+            </ol>
+
+            <p id="help" class="b">Få hjælp fx her:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/jsref/jsref_obj_number.asp">JavaScript Numbers</a></li>
+                <li><a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">JavaScript Operators (plus, minus, gange osv.)</a></li>
+                <li><a href="https://www.w3schools.com/jsref/jsref_parsefloat.asp">JavaScript parseFloat() Function</a> eller <a href="https://www.w3schools.com/jsref/jsref_parseint.asp">JavaScript parseInt() Function</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

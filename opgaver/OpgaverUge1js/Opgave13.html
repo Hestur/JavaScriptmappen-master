@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style\common.css">
+    <title>Opgave 13</title>
+    <script>
+        // Det her er et array med objekter i ... læs gerne om objekter her: https://www.w3schools.com/js/js_object_definition.asp
+        var ekkoShortlist = [
+                {titel: "GR4DE", instruktor: "Aske Sørensen", shortlist: 1},
+                {titel: "Esther, min elskede", instruktor: "Julius Lagoutte Larsen", shortlist: 4},
+                {titel: "Cathrine Dufour the Story", instruktor: "Tobias Damkjær", shortlist: 3},
+                {titel: "Den apokryfe prins", instruktor: "Anton Isbrand", shortlist: 2}
+            ];
+
+    </script>
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+
+        <h1 id="overskrift">Opgave 13: Array-øvelse 2</h1>
+        <p>Bemærk array'et i script-tag i head!</p>
+
+        <p id="foerste"></p>
+        <div id="alle"></div>
+
+        <input type="button" value="Klik her for at udskrive objekterne i arrayet" id="knap" />
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+            <p>Et array kan være mere kompliceret end det i opgaven før. Arrayet i opgaven her består af objekter - se link under afsnittet "Hjælp".</p>
+
+            <ol>
+                <li>Når man klikker på knappen -> </li>
+                <li>... skal listens nr. 1 objekt (index = 0) have alle sine værdier (titel, instruktor, ekkoshortlist) udskrevet i #foerste</li>
+                <li>... skal listen/arrayet loopes igennem og "titel" og "instruktor" for alle skal udskrives i #alle.</li>
+                <li>Prøv evt. om du kan udskrive/loope værdierne ud i en html-liste ol eller ul og stil det lidt pænt op ...</li>
+            </ol>
+
+            <p id="help" class="b">Få hjælp fx her:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/js/js_object_definition.asp">JavaScript Objects</a></li>
+                <li><a href="https://stackoverflow.com/a/48916461/5094873">How to loop through an array containing objects and access their properties</a></li>
+                <li><a href="https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm" target="_blank"></a></li>
+                <li><a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">JavaScript Arrays (se fx afsnittet "Access the Elements of an Array")</a></li>
+                <li><a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">JavaScript For Loop</a></li>
+                <li><a href="https://www.w3schools.com/js/js_array_iteration.asp" target="_blank">Lidt anderledes måder at loope et array ud på: JavaScript Array Iteration Methods</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">Array.prototype.forEach()</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
