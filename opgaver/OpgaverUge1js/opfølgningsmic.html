@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Style/common.css">
+    
+</head>
+<body>
+
+  
+  First name: <input type="text" name="fname" value="" id="navn1"><br>
+  Last name: <input type="text" name="lname" value="" id="navn2"><br><br>
+  <button id="knap" onclick="myFunction()">Klik her</button>
+  
+  <p id="demo">Navn:</p>
+  <script>
+
+  function myFunction() {
+    v1 = navn1.value;
+    v2 = navn2.value;
+    return "Hello " + v1 + " " + v2;
+  }
+  document.getElementById("demo").innerHTML = myFunction(v1+v2);
+  </script>
+  
+  </body>
+</html> 

@@ -24,7 +24,7 @@
     <div id="wrapper">
 
         <h1 id="overskrift">Opgave 10: Flyt image</h1>
-        
+
 
         <div id="board">
             <img src="./img/pacman.png" alt="pacman" id="pacman" />
@@ -35,6 +35,7 @@
             <img id="op" src="./img/op.png" alt="Op" onclick="moveUp()" />
             <img id="ned" src="./img/ned.png" alt="Ned" onclick="moveDown()" />
             <img id="hoejre" src="./img/hoejre.png" alt="Højre" onclick="moveRight()" />
+            <img id="stop" src="Img/stop.png" alt="stop" onclick="stopPM()">
         </div>
 
 
@@ -83,6 +84,7 @@
             var key_code = e.which || e.keyCode;
             switch (key_code) {
                 case 37: //left arrow key
+                e.preventDefault();
                     moveLeft();
                     break;
                 case 38: //Up arrow key
@@ -90,6 +92,7 @@
                     moveUp();
                     break;
                 case 39: //right arrow key
+                e.preventDefault();
                     moveRight();
                     break;
                 case 40: //down arrow key
@@ -98,28 +101,42 @@
                     break;
             }
         }
+
+        let t;
+
         function moveLeft() {
+            clearTimeout(t); /*Stopper timeout */
             if (parseInt(objImage.style.left) > 365) {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + 'px';
+                t = setTimeout(moveLeft, 50);
             }
         }
         function moveUp() {
+            clearTimeout(t);
             if (parseInt(objImage.style.top) > 130) {
                 objImage.style.top = parseInt(objImage.style.top) - 5 + 'px';
+                t = setTimeout(moveUp, 50);
+
             }
         }
 
         function moveRight() {
+            clearTimeout(t);
             if (parseInt(objImage.style.left) < 810) {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + 'px';
+                t = setTimeout(moveRight, 50);
             }
 
         }
         function moveDown() {
-
+            clearTimeout(t);
             if (parseInt(objImage.style.top) < 375) {
                 objImage.style.top = parseInt(objImage.style.top) + 5 + 'px';
+                t = setTimeout(moveDown, 50);
             }
+        }
+        function stopPM(){
+            clearTimeout(t);
         }
         window.onload = init;
 
