@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style\common.css">
     <title>Opgave 14</title>
     <style>
-        #resultat { margin-top: 30px; padding: 20px; background: #F0F7E3; }
+        #resultat { margin-top: 30px; padding: 20px; background: rgb(162, 255, 41); }
         #resultat li { line-height: 30px; font-family: Verdana, Sans-Serif; }
     </style>
 </head>
@@ -35,7 +35,7 @@
                     <input type="text" name="tal2" id="tal2">
                 </div>
                 <div>
-                    <input type="button" value="Klik for at beregne" id="knap" />
+                    <input type="button" value="Klik for at beregne" id="knap" onclick="calcPlus()" onclick="calcMinus()" />
                 </div>
 
             </fieldset>
@@ -56,14 +56,14 @@
             <h4>Opgaven</h4>
 
             <h4>JavaScript - beregn</h4>
-            <p>Brugeren indtaster et tal i hvert af de to input-felter. Når han klikker på knappen bliver de to tal plusset, minuset, ganget og divideret med hinanden og resultatet vist på siden.</p>
+            <p>Brugeren indtaster et tal i hvert af de to input-felter. Nï¿½r han klikker pï¿½ knappen bliver de to tal plusset, minuset, ganget og divideret med hinanden og resultatet vist pï¿½ siden.</p>
             <ol>
-                <li>Når man klikker på knappen -> bliver de to tal for input-felterne beregnet (plus, minus, gange og dividere)</li>
+                <li>Nï¿½r man klikker pï¿½ knappen -> bliver de to tal for input-felterne beregnet (plus, minus, gange og dividere)</li>
                 <li>Resultatet af beregningen vises i de fire span-tag</li>
-                <li>Forsøg at give brugeren en advarsel, hvis et inputfelt er tomt (validere), når der trykkes på knappen.</li>
+                <li>Forsï¿½g at give brugeren en advarsel, hvis et inputfelt er tomt (validere), nï¿½r der trykkes pï¿½ knappen.</li>
             </ol>
 
-            <p id="help" class="b">Få hjælp fx her:</p>
+            <p id="help" class="b">Fï¿½ hjï¿½lp fx her:</p>
             <ul>
                 <li><a href="https://www.w3schools.com/jsref/jsref_obj_number.asp">JavaScript Numbers</a></li>
                 <li><a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">JavaScript Operators (plus, minus, gange osv.)</a></li>
@@ -73,6 +73,22 @@
         </div>
 
     </div>
+
+    <script>
+    function calcPlus(){
+      let x =  document.getElementById("tal1").value; 
+      let y =  document.getElementById("tal2").value;
+      
+    document.getElementById("plus").innerHTML = (parseFloat(x) + parseFloat(y));
+    document.getElementById("minus").innerHTML = (parseFloat(x) - parseFloat(y));  
+    document.getElementById("gange").innerHTML = (parseFloat(x) * parseFloat(y));
+    document.getElementById("dividere").innerHTML = (parseFloat(x) / parseFloat(y));
+    }
+    
+      
+    
+    
+    </script>
 
 </body>
 
