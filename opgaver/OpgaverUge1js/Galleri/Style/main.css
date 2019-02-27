@@ -1,0 +1,17 @@
+body{margin:0;padding: 0;background-color: #000;}
+
+/* container-div med det store img */
+#imgcontainer{margin: auto;padding: 60px 30px;}
+#imgcontainer img{display: block;margin: auto;border: 1px solid#fff;}
+
+/* Container-div omkring diven(thumben) som skal åbne og lukke (div med pile og div med thumbs */
+#imgmenucontainer{position: absolute; left: 0px; top: 0px; width: 180px; border-radius: 5px; background-color: rgba(255, 255, 255, 1);}
+
+/* div med de to pile */    
+#imgpusher{position: absolute; top: 0px; left: 190px;}
+#imgpusher #left {}
+#imgpusher #right{display: none;}
+
+/* div med thumbs */
+#imgmenu {box-sizing: border-box;padding: 15px;border-radius: 5px;}
+#imgmenu img{display: block; margin: 20px 0; border: 1px solid #fff; cursor: pointer;}
