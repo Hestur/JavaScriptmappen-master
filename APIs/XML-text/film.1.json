@@ -1,0 +1,30 @@
+{
+  "catalog": {
+    "movie": [
+      {
+        "title": "Hesteviskeren",
+        "publishyear": "2009",
+        "country": "Laos",
+        "instructor": "D.trump",
+        "censur": "NC-17",
+        "rating": "2/10"
+      },
+      {
+        "title": "Hestene der løb væk",
+        "publishyear": "1971",
+        "country": "Vietnam",
+        "instructor": "P.Nixon",
+        "censur": "G",
+        "rating": "8/10"
+      },
+      {
+        "title": "Hestekrigen",
+        "publishyear": "2018",
+        "country": "China",
+        "instructor": "Street bum",
+        "censur": "PG",
+        "rating": "5/10"
+      }
+    ]
+  }
+}

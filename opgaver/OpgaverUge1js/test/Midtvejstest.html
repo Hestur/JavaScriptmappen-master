@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* ELEMENTS/TAGS */
+
+        body {
+            font-family: Verdana, Sans-Serif;
+            font-size: 14px;
+            background: #D1E3B9;
+        }
+
+        h1 {
+            color: #527129;
+            margin-bottom: 30px;
+        }
+
+        ol {
+            padding-bottom: 10px;
+        }
+
+        li {
+            color: #364E6F;
+        }
+
+        p {
+            line-height: 20px;
+        }
+
+        a {
+            color: #1c3446;
+            border-bottom: 1px dashed #1c3446;
+            text-decoration: none;
+            padding: 3px;
+        }
+
+        a:hover {
+            background-color: #DBEAF9;
+        }
+
+        input {
+            margin-top: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            background: #333;
+            background-image: linear-gradient(left, #aaa, #333, #aaa);
+        }
+
+        #wrapper {
+            width: 800px;
+            margin: auto;
+            padding: 40px 30px;
+            background: #FFF;
+            border: 1px solid #6E9242;
+            border-radius: 4px;
+            box-shadow: 5px 5px 10px #000;
+        }
+
+        .b {
+            font-weight: bold;
+            color: #11111d;
+        }
+
+        .hilite {
+            background-color: #FFFFA5;
+        }
+
+
+    </style>
+   <script>
+   
+   function onhovertxt(){
+    document.getElementById("teksten").classList.add("hilite");
+} // jeg ville have addet classen hilite til "teksten"
+
+function replaceimg(){
+        document.getElementById("billede").src = "../Galleri/img/Thumb/cat4.jpg";
+    }
+    function showname(){
+     document.getElementById("inpNavn").value = document.getElementById("navn").innerHTML;
+    }
+ 
+   
+   
+   </script>
+    <title>Midtvejstest</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+
+        <h1>Midtvejstest: Løs de tre opgaver så godt du kan</h1>
+        <p class="b">OBS! Opgaverne er beskrevet som kommentarer i koden.</p>
+        <p>Hvis du forsøger en løsning, som fejler/ikke virker, så udkommenter det og skriv lidt om, hvad du prøvede på.</p>
+        <p>Læg dit javascript i en selvstændig js-fil - det js-filen, du skal aflevere. Lav ikke om på html'en herunder.</p>
+        <p class="hilite b">VIGTIGT: I js-filen skal du forklare/kommentere, hvad dine forskellige funktioner mv. gør.</p>
+        <p>Brug gerne dine tidligere opgaver, Google mv. - men forstyr ikke de andre i klassen. </p>
+
+        <hr>
+        <!-- HER FØLGER DE TRE OPGAVER - LÆS KOMMENTARERNE -->
+
+        <h3>Opgave 1 - tilføj en class til html-tag</h3>
+        <!-- Ved fx "cursor/mus" på tekst: Tilføj css-class hilite (findes allerede i style). -->
+        <!-- Ved "cursor/mus" væk fra tekst: Fjern css-class hilite -->
+        <p id="teksten" onmouseover="onhovertxt()"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. </p>
+
+        <hr>
+
+        <h3>Opgave 2 - udskift billede</h3>
+        <!-- Ved klik på knap: Udskift billedet med et andet efter eget valg -->
+        <img src="../Galleri/img/Thumb/cat2.jpg" alt="" id="billede" /><br>
+        <button id="bnt1" onclick="replaceimg()">Klik her for at skifte billedet ud</button>
+
+        <hr>
+
+        <h3>Opgave 3 - udskriv value fra input</h3>
+        <!-- Ved klik på knap, hvis value UDFYLDT: Udskriv inputfeltets value (navnet) i p#navn -->
+        <!-- Ved klik på knap, hvis value er TOM: Lav en alert-box og advar om at feltet ikke må være tomt -->
+        <input type="text" name="Navn" value="" id="inpNavn">
+        <button onclick="showname()">Klik her for at vise navn herunder</button>
+        <p id="navn"></p>
+
+        <hr>
+
+        <p>Husk, at det er din javascript-fil, du skal aflevere. </p>
+
+    </div>
+
+</body>
+
+</html>

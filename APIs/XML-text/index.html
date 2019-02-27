@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+</head>
+
+<body>
+    <p id="demo"> Her XML:</p>
+    <p id="demo2"> Her JSON:</p>
+
+    <script>
+         var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+             myFunction(this);
+             }
+         };
+         xhttp.open("GET", "film.xml", true);
+         xhttp.send();
+
+         function myFunction(xml) {
+             var xmlDoc = xml.responseXML;
+             document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + " " +
+             xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + " | " +
+             xmlDoc.getElementsByTagName("publishyear")[0].childNodes[0].nodeValue + " | " +
+             xmlDoc.getElementsByTagName("country")[0].childNodes[0].nodeValue + " | " +
+             xmlDoc.getElementsByTagName("instructor")[0].childNodes[0].nodeValue + " | " +
+             xmlDoc.getElementsByTagName("censur")[0].childNodes[0].nodeValue + " | " +
+             xmlDoc.getElementsByTagName("rating")[0].childNodes[0].nodeValue;
+         } 
+
+
+        var text = '{"movie":[' +
+            '{"title": "Hesteviskeren","publishyear": "2009","country": "Laos","instructor": "D.trump","censur": "NC-17","rating": "2/10" },' +
+            '{"title": "Hestene der løb væk","publishyear": "1971","country": "Vietnam","instructor": "P.Nixon","censur": "G","rating": "8/10" },' +
+            '{"title": "Hestekrigen","publishyear": "2018","country": "China","instructor": "Street bum","censur": "PG","rating": "5/10" }]}';
+
+        obj = JSON.parse(text);
+        document.getElementById("demo2").innerHTML =
+        document.getElementById("demo2").innerHTML + " " + obj.movie[1].title + " | " + obj.movie[1].publishyear  + " | " + obj.movie[1].country  + " | " + obj.movie[1].instructor  + " | " + obj.movie[1].censur  + " | " + obj.movie[1].rating;
+
+    </script>
+
+</body>
+
+</html>
