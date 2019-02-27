@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog>
-  <movie>
-    <title>Hesteviskeren</title>
-    <publishyear>2009</publishyear>
-    <country>Laos</country>
-    <instructor>D.trump</instructor>
-    <censur>NC-17</censur>
-    <rating>2/10</rating>
-  </movie>
- <movie>
-    <title>Hestene der løb væk</title>
-    <publishyear>1971</publishyear>
-    <country>Vietnam</country>
-    <instructor>P.Nixon</instructor>
-    <censur>G</censur>
-    <rating>8/10</rating>
-  </movie>
-   <movie>
-    <title>Hestekrigen</title>
-    <publishyear>2018</publishyear>
-    <country>China</country>
-    <instructor>Street bum</instructor>
-    <censur>PG</censur>
-    <rating>5/10</rating>
-  </movie>
+    <movie>
+        <title>Hesteviskeren</title>
+        <publishyear>2009</publishyear>
+        <country>Laos</country>
+        <instructor>D.trump</instructor>
+        <censur>NC-17</censur>
+        <rating>2/10</rating>
+    </movie>
+    <movie>
+        <title>Hestene der løb væk</title>
+        <publishyear>1971</publishyear>
+        <country>Vietnam</country>
+        <instructor>P.Nixon</instructor>
+        <censur>G</censur>
+        <rating>8/10</rating>
+    </movie>
+    <movie>
+        <title>Hestekrigen</title>
+        <publishyear>2018</publishyear>
+        <country>China</country>
+        <instructor>Street bum</instructor>
+        <censur>PG</censur>
+        <rating>5/10</rating>
+    </movie>
 </catalog>
