@@ -1,13 +1,17 @@
+// print specific data from API
+var r = "https://swapi.co/api/planets/3/";
+
 callAPI();
 
 function callAPI(){
-    var r = "https://swapi.co/api/planets/3/";
+    
     fetch(r,{
         method: "get"
      }).then(function(response){
+         console.log(response);
          return response.json();
      }).then(function(jsonresponse){
-      //  console.log(jsonresponse.name);
+       console.log(jsonresponse);
         printDataNy(jsonresponse);  
      }).catch(function(error){
          console.log("err" + error);

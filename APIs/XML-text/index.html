@@ -15,25 +15,25 @@
     <p id="demo2"> Her JSON:</p>
 
     <script>
-         var xhttp = new XMLHttpRequest();
-         xhttp.onreadystatechange = function() {
-             if (this.readyState == 4 && this.status == 200) {
-             myFunction(this);
-             }
-         };
-         xhttp.open("GET", "film.xml", true);
-         xhttp.send();
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "film.xml", true);
+        xhttp.send();
 
-         function myFunction(xml) {
-             var xmlDoc = xml.responseXML;
-             document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + " " +
-             xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + " | " +
-             xmlDoc.getElementsByTagName("publishyear")[0].childNodes[0].nodeValue + " | " +
-             xmlDoc.getElementsByTagName("country")[0].childNodes[0].nodeValue + " | " +
-             xmlDoc.getElementsByTagName("instructor")[0].childNodes[0].nodeValue + " | " +
-             xmlDoc.getElementsByTagName("censur")[0].childNodes[0].nodeValue + " | " +
-             xmlDoc.getElementsByTagName("rating")[0].childNodes[0].nodeValue;
-         } 
+        function myFunction(xml) {
+            var xmlDoc = xml.responseXML;
+            document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + " " +
+                xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + " | " +
+                xmlDoc.getElementsByTagName("publishyear")[0].childNodes[0].nodeValue + " | " +
+                xmlDoc.getElementsByTagName("country")[0].childNodes[0].nodeValue + " | " +
+                xmlDoc.getElementsByTagName("instructor")[0].childNodes[0].nodeValue + " | " +
+                xmlDoc.getElementsByTagName("censur")[0].childNodes[0].nodeValue + " | " +
+                xmlDoc.getElementsByTagName("rating")[0].childNodes[0].nodeValue;
+        }
 
 
         var text = '{"movie":[' +
@@ -43,7 +43,7 @@
 
         obj = JSON.parse(text);
         document.getElementById("demo2").innerHTML =
-        document.getElementById("demo2").innerHTML + " " + obj.movie[1].title + " | " + obj.movie[1].publishyear  + " | " + obj.movie[1].country  + " | " + obj.movie[1].instructor  + " | " + obj.movie[1].censur  + " | " + obj.movie[1].rating;
+            document.getElementById("demo2").innerHTML + " " + obj.movie[1].title + " | " + obj.movie[1].publishyear + " | " + obj.movie[1].country + " | " + obj.movie[1].instructor + " | " + obj.movie[1].censur + " | " + obj.movie[1].rating;
 
     </script>
 
