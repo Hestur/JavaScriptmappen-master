@@ -8,7 +8,7 @@ window.onload = function () {
     document.getElementById("inpsoeg").addEventListener("keyup", function(){
         // var sw = searchword
         var sw = document.getElementById("inpsoeg").value;
-
+        
         wsurl = "https://api.dfi.dk/v1/film/?SortBy=title&Title=" + sw;
     
         kaldWebservice();
