@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
 
 </head>
 
@@ -45,28 +45,6 @@
         document.getElementById("demo2").innerHTML =
             document.getElementById("demo2").innerHTML + " " + obj.movie[1].title + " | " + obj.movie[1].publishyear + " | " + obj.movie[1].country + " | " + obj.movie[1].instructor + " | " + obj.movie[1].censur + " | " + obj.movie[1].rating;
 
-
-
-            var books = [{
-  'ISBN': 'A',
-  'title': "Old Man's War",
-  'author': 'John Scalzi'
-}, {
-  'ISBN': 'B',
-  'title': 'The Lock Artist',
-  'author': 'Steve Hamilton'
-}]
-
-var options = {
-  keys: ['title', 'author'],
-  id: 'ISBN'
-}
-var fuse = new Fuse(books, options)
-
-console.log(fuse.search('old'));
-
-
-document.getElementById("result").innerHTML += fuse.search("old");
     </script>
 
 </body>

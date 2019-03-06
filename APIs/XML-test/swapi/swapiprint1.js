@@ -1,5 +1,5 @@
 // print specific data from API
-var r = "https://swapi.co/api/planets/3/";
+var r = "https://ow-api.com/v1/stats/pc/us/cats-11481/profile";
 
 callAPI();
 
@@ -12,7 +12,7 @@ function callAPI(){
          return response.json();
      }).then(function(jsonresponse){
        console.log(jsonresponse);
-        printDataNy(jsonresponse);  
+        printData(jsonresponse);  
      }).catch(function(error){
          console.log("err" + error);
      });
@@ -21,7 +21,12 @@ function callAPI(){
 var t ="";
 
 function printData(jsondata){
-t = "Name: " + jsondata.name;
+t = 
+"Name: " + jsondata.name + " | " +
+"Lvl: " + jsondata.level + " | " +
+"Games Won: " + jsondata.gamesWon + " | " +  
+"Endorsement lvl: " + jsondata.endorsement 
+;
 document.getElementById("result").innerHTML = t;
 }
 

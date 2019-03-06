@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search API</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+        #resultat { display: flex; flex-wrap: wrap;}
+        .box { 
+            width: 200px; 
+            padding: 40px 20px; 
+            background-color:rgb(27, 172, 27); 
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="./swapisearch.js"></script>
+    
+</head>
+
+<body>
+
+    <h1>Star Wars API - med søgning i "people"</h1>
+
+    <!-- Til at bladre frem og tilbage -->
+    <div id="navfremtilbage">
+        <button id="frem" onclick="navN();">FREM</button>
+        <button id="tilbage" onclick="navP();">TILBAGE</button>
+    </div>
+
+    <!-- Søgefelt/input -->
+    <label for="soeg">Søg noget</label>
+    <input type="text" name="soeg" id="inpSoeg">
+
+    <!-- Til at udskrive resultatet -->
+    <div id="resultat">
+        <!-- Her skal resultaterne loopes ud -->
+    </div>
+
+</body>
+
+</html>
