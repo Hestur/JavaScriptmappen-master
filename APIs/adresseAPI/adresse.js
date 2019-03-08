@@ -1,15 +1,16 @@
-//<option value="8000 Århus"></option>
-
-
 var wsurl = ""; 
 
 window.onload = function () {
 
     document.getElementById("inpPostnr").addEventListener("keyup", function(){
-        wsurl = "https://dawa.aws.dk/postnumre/autocomplete?q=" + "70";
+        var val = document.getElementById("inpPostnr").value;
+        wsurl = "https://dawa.aws.dk/postnumre/autocomplete?q=" + val;
         kaldWebservice();
     });
-
+    // change = chrome og select = FF
+    document.getElementById("inpPostnr").addEventListener("change", function(){
+       alert("jaja " + document.getElementById("inpPostnr").value);
+    });
     
 
 };
@@ -52,7 +53,7 @@ function udskrivData(jsondata) {
     for(var x in jsondata){
         console.log(jsondata[x].tekst);
 
-        opt = '<option value="8000 århus"></option>'
+        opt += '<option value="' + jsondata[x].tekst + '"></option>'
     }
     document.getElementById("PostNrList").innerHTML = opt;
 }

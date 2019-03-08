@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WeatherMap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="weather.js"></script>
-</head>
+</head> 
+
 <body>
-    
+
+    <h1>Vejret i <span id="overskriftby"></span></h1>
+
+    <div id="soeg">
+        <input type="text" id="inpPostnr" placeholder="Indtast postnummer">
+        <button id="btnPostnr">Vis vejret for postnummer</button>
+    </div>
+
+    <br><br>
+
+    <div id="resultat">
+
+        <div id="bynavn"></div>
+        <div id="beskrivelse"></div>
+        <div id="temp"></div>
+        <img src="" id="vejrimg" />
+
+        <p>
+            <a href="#" id="kortlink" target="_blank">Klik her for at se på kort</a>
+        </p>
+
+        Iframe her:
+        <iframe src="https://www.videndjurs.dk/#" id="ifrMap" width="600" height="450" frameborder="0"
+            style="border:0"></iframe>
+
+    </div>
+
+
 </body>
+
 </html>
