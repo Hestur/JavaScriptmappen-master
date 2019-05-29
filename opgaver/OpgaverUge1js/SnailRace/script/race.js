@@ -1,32 +1,16 @@
-var snegl1 = {
-    id: "a",
-    navn: "Snegl 1",
-    foto: "img/snegl1.png",
-    x: -160,
-    y: -40
-};
-var snegl2 = {
-    id: "b",
-    navn: "Snegl 2",
-    foto: "img/snegl2.png",
-    x: -160,
-    y: 40
-
-};
-var snegl3 = {
-    id: "c",
-    navn: "Snegl 3",
-    foto: "img/snegl3.png",
-    x: -160,
-    y: -125
-};
-var snegl4 = {
-    id: "d",
-    navn: "Snegl 4",
-    foto: "img/snegl0.png",
-    x: -160,
-    y: 125
-};
+class Snail {
+    constructor(id,navn,foto,x,y){
+        this.id = id;
+        this.navn = navn;
+        this.foto = foto;
+        this.x = x;
+        this.y = y;
+    }
+}
+var snailOne = new Snail('a','snailOne', '/img/snegl1.png', -160,-40);
+var snailTwo = new Snail('b','snailTwo', '/img/snegl2.png', -160,40);
+var snailThree = new Snail('c','snailThree', '/img/snegl3.png', -160,-125);
+var snailFour = new Snail('d','snailFour', '/img/snegl4.png', -160,125);
 
 
 var sek = 0;// En tæller der skal tælle hvor lang tid ræset har varet. Starter selvf0lgelig på 0.
@@ -44,35 +28,35 @@ window.onload = function () {
     var racetrack = document.getElementById("raceway");
     //Opretter ny div i raceway-div'en med snegl's properties. Sneglenes properties er defineret i variablerne øverst. 
     var s1 = document.createElement("div");
-    s1.id = snegl1.id;
+    s1.id = snailOne.id;
     s1.className = "snegle-container";
-    s1.style.backgroundImage = "url( ' " + snegl1.foto + " ' )";
-    s1.style.top = snegl1.y + "px";
-    s1.style.left = snegl1.x + "px";
+    s1.style.backgroundImage = "url( ' " + snailOne.foto + " ' )";
+    s1.style.top = snailOne.y + "px";
+    s1.style.left = snailOne.x + "px";
     racetrack.appendChild(s1);
-    // Opretter ny div i raceway-div'en med snegl2's properties.
+    // Opretter ny div i raceway-div'en med snailTwo's properties.
     var s2 = document.createElement("div");
-    s2.id = snegl2.id;
+    s2.id = snailTwo.id;
     s2.className = "snegle-container";
-    s2.style.backgroundImage = "url( ' " + snegl2.foto + " ' )";
-    s2.style.top = snegl2.y + "px";
-    s2.style.left = snegl2.x + "px";
+    s2.style.backgroundImage = "url( ' " + snailTwo.foto + " ' )";
+    s2.style.top = snailTwo.y + "px";
+    s2.style.left = snailTwo.x + "px";
     racetrack.appendChild(s2);
-    // Opretter ny div i raceway-div'en med snegl3's properties.
+    // Opretter ny div i raceway-div'en med snailThree's properties.
     var s3 = document.createElement("div");
-    s3.id = snegl3.id;
+    s3.id = snailThree.id;
     s3.className = "snegle-container";
-    s3.style.backgroundImage = "url( ' " + snegl3.foto + " ' )";
-    s3.style.top = snegl3.y + "px";
-    s3.style.left = snegl3.x + "px";
+    s3.style.backgroundImage = "url( ' " + snailThree.foto + " ' )";
+    s3.style.top = snailThree.y + "px";
+    s3.style.left = snailThree.x + "px";
     racetrack.appendChild(s3);
-    // Opretter ny div i raceway-div'en med snegl4's properties.
+    // Opretter ny div i raceway-div'en med snailFour's properties.
     var s4 = document.createElement("div");
-    s4.id = snegl4.id;
+    s4.id = snailFour.id;
     s4.className = "snegle-container";
-    s4.style.backgroundImage = "url( ' " + snegl4.foto + " ' )";
-    s4.style.top = snegl4.y + "px";
-    s4.style.left = snegl4.x + "px";
+    s4.style.backgroundImage = "url( ' " + snailFour.foto + " ' )";
+    s4.style.top = snailFour.y + "px";
+    s4.style.left = snailFour.x + "px";
     racetrack.appendChild(s4);
 
 }
@@ -90,31 +74,31 @@ function afsted() {
 
     //Ny position betemmes
     // Sneglenes nuværende x-pos øges med random tal som laves af funtionen Spring();
-    snegl1.x += spring();
-    snegl2.x += spring();
-    snegl3.x += spring();
-    snegl4.x += spring();
+    snailOne.x += spring();
+    snailTwo.x += spring();
+    snailThree.x += spring();
+    snailFour.x += spring();
     //Sneglene flyttes til den nye x-pos
-    document.getElementById(snegl1.id).style.left = snegl1.x + "px";
-    document.getElementById(snegl2.id).style.left = snegl2.x + "px";
-    document.getElementById(snegl3.id).style.left = snegl3.x + "px";
-    document.getElementById(snegl4.id).style.left = snegl4.x + "px";
+    document.getElementById(snailOne.id).style.left = snailOne.x + "px";
+    document.getElementById(snailTwo.id).style.left = snailTwo.x + "px";
+    document.getElementById(snailThree.id).style.left = snailThree.x + "px";
+    document.getElementById(snailFour.id).style.left = snailFour.x + "px";
 
     // Spillet slutter når en eller begge snegle når målstregen (finishline).
-    if (snegl1.x >= finishline || snegl2.x >= finishline || snegl3.x >= finishline || snegl4.x >= finishline) {
+    if (snailOne.x >= finishline || snailTwo.x >= finishline || snailThree.x >= finishline || snailFour.x >= finishline) {
 
         // Finder vinderen ved at sammenligne x-pos.
-        if (snegl1.x > snegl2.x && snegl1.x > snegl3.x && snegl1.x > snegl4.x) {
-            setTimeout("winner('" + snegl1.navn + "');", 1000); // vinder = snegl1
+        if (snailOne.x > snailTwo.x && snailOne.x > snailThree.x && snailOne.x > snailFour.x) {
+            setTimeout("winner('" + snailOne.navn + "');", 1000); // vinder = snailOne
         }
-        else if (snegl2.x > snegl1.x && snegl2.x > snegl3.x && snegl2.x > snegl4.x) {
-            setTimeout("winner('" + snegl2.navn + "'):", 1000); // vinder = snegl2
+        else if (snailTwo.x > snailOne.x && snailTwo.x > snailThree.x && snailTwo.x > snailFour.x) {
+            setTimeout("winner('" + snailTwo.navn + "'):", 1000); // vinder = snailTwo
         }
-        else if (snegl3.x > snegl1.x && snegl3.x > snegl2.x && snegl3.x > snegl4.x) {
-            setTimeout("winner('" + snegl3.navn + "'):", 1000); // vinder = snegl3
+        else if (snailThree.x > snailOne.x && snailThree.x > snailTwo.x && snailThree.x > snailFour.x) {
+            setTimeout("winner('" + snailThree.navn + "'):", 1000); // vinder = snailThree
         }
-        else if (snegl4.x > snegl1.x && snegl4.x > snegl3.x && snegl4.x > snegl2.x) {
-            setTimeout("winner('" + snegl4.navn + "'):", 1000); // vinder = snegl4
+        else if (snailFour.x > snailOne.x && snailFour.x > snailThree.x && snailFour.x > snailTwo.x) {
+            setTimeout("winner('" + snailFour.navn + "'):", 1000); // vinder = snailFour
         }
         else {
             setTimeout("winner('');", 1000); //alle kommer i mål samtidig så ingen vinder/ingen taber.
